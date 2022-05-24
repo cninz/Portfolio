@@ -1,0 +1,268 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+:root {
+  --duck: #F9D624;
+  --blueribbon: #0066ff; 
+  --cobalt: #0146AD;
+  --black: #222;
+  --white: #fff;
+  --light-black: rgb(65, 65, 65);
+  --light-white: #ccc;
+  --light-bg: #f5f5f5;
+  --dark-bg: rgba(0, 0, 0, .7);
+  --border: .1rem solid #aaa;
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+  font-family: 'Inter', 'sans-serif';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.43, 1.1, 0.62, 1.08);
+  background:rgb(65, 65, 65);
+  
+}
+
+*>.img {
+  user-select: none;
+  pointer-events: none;
+
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--duck);
+}
+
+.profile{
+  text-align: center;
+}
+
+h1{
+  font-size: 5rem;
+}
+
+p{
+  font-size: 3rem;
+  padding: 0 5rem;
+  
+}
+
+h1 a {
+  color: var(--duck);
+}
+
+
+button {
+  margin: 2rem 0.5rem;
+  background: var(--duck);
+  box-shadow: var(--box-shadow);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  text-shadow: 2px 2px #d6b616;
+}
+
+button a{
+  color: var(--white);
+}
+
+button:hover{
+  border-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+.my-work{
+  color: var(--cobalt);
+  font-size: 5rem;
+  margin-left: -150px;
+}
+
+
+.my-work, .arrow{
+  display: flex;
+  flex: column;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  /* background: var(--blueribbon) */
+}
+
+.arrow:hover{
+  transform: scale(1.1)
+}
+
+.next-page{
+  text-align: center;
+  margin-top: 25rem;  
+  grid-column: 3/4;
+}
+
+.wave{
+  width: 100%;
+  height: 100%;
+  /* grid-column: 1/-1; */
+  
+}
+
+.bottom{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  width: 100%;
+  margin: 0;
+}
+
+.image, .grid-content{
+  grid-row: 1/6;
+}
+.image{
+  grid-column: 1/-1;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-content{
+  grid-column: 2/5;
+  align-self: center;
+  grid-row: 4/5;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 1000;
+  color: var(--cobalt);
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-content:hover{
+  letter-spacing: 0.5rem;
+}
+
+a{
+  grid-column: 2/5;
+  grid-row: 5/6;
+  margin: auto;
+  color: var(--cobalt);
+}
+
+a:hover{
+  transform: scale(1.1);
+}
+
+.grid-content, .image2{
+  background: var(--blueribbon);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.project-content img{
+  height: 50%;
+  width: 50%;
+}
+
+.first-project{
+  display: flex;
+  flex-direction: row;
+  padding: 3rem 20rem;
+  align-items: center;
+}
+
+.first-project p{
+  padding: 0; 
+}
+
+.right, .left{
+  padding: 0 5rem;
+}
+
+.left{
+  transform: translateX(-50%);
+}
+
+.right{
+  transform: translateX(50%);
+}
+
+
+/* .more-stuff-grid {
+  padding: 4em 0;
+  display: grid;
+  grid-gap: 2em;
+  align-items: center;
+  grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(1em,
+      1fr);
+}
+
+.from-left {
+  grid-column: 2 / 3;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.from-right {
+  grid-column: 3 / 4;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in,
+    -webkit-transform 400ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+} */
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
