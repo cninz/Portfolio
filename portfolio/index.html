@@ -35,12 +35,12 @@
 		<section class="profile">
 			<img src="img/profile-avatar.png" alt="Profile Pic">
 			<section class="text">
-				<h1>Hi, my name is <a href=#>Nirel</a> and I'm a Software Developer</h1>
+				<h1><span></span>, my name is <a href=#>Nirel</a> and I'm a Software Developer</h1>
 				<p>I like to combine art and technology in my work. I want to be able to connect everyone around the world and bring joy in many more ways than one. In the future I want to delve in the world of video game development and AI</p>
 			</section>
 			<section class="info">
-				<button><a href="https://docs.google.com/document/d/1RbdC-8Tt7YgLNh_6yWMhv3Tl3Ian-jm092PyLYJ3YiA" target="_blank" rel="noopener noreferrer">Resume</a></button>
-				<button><a href="https://github.com/cninz" target="_blank" rel="noopener noreferrer">GitHub</a></button>
+				<button><span><a href="https://docs.google.com/document/d/1RbdC-8Tt7YgLNh_6yWMhv3Tl3Ian-jm092PyLYJ3YiA" target="_blank" rel="https://docs.google.com/document/d/1RbdC-8Tt7YgLNh_6yWMhv3Tl3Ian-jm092PyLYJ3YiA/edit?usp=sharing">Resume</a></button>
+				<button><span><a href="https://github.com/cninz" target="_blank" rel="noopener noreferrer">GitHub</a></span></button>
 			</section>
 		</section>
 		<section>
@@ -63,26 +63,32 @@
 	</div>
 	<section class="project-content">
 		
-		<div class="first-project">
-			<img src="img/sizzle-restaurant.png">
-			<div class="right">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minima libero nobis cupiditate ipsam, ut delectus eveniet, fugit incidunt labore nostrum, dolorem sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
-				<button><a href="https://sizzlerestaurant.netlify.app">Live Site</a></button>
+		<div class="first project">
+			<img src="img/sizzle-restaurant.png"  target="_blank" rel="noopener noreferrer" class="left slide-in">
+			<div class="right slide-in content">
+				<p> Quibusdam minima libero nobis cupiditate ipsam, ut delectus eveniet, fugit incidunt labore nostrum, dolorem sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
+				<br>
+				<p>Tools Used: HTML, CSS, JavasScript</p>
+				<button><span><a href="https://sizzlerestaurant.netlify.app" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
 			</div>
 		</div>
-			<div class="first-project">
-				<div class="left">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minima libero nobis cupiditate ipsam, ut delectus eveniet, fugit incidunt labore nostrum, dolorem sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
-					<button><a href="https://glammakeupsalon.netlify.app">Live Site</a></button>
+			<div class="second project">
+				<div class="left slide-in content">
+					<p> Quibusdam minima libero nobis cupiditate ipsam, ut delectus eveniet, fugit incidunt labore nostrum, dolorem sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
+					<br>
+					<p>Tools Used: HTML, CSS, JavasScript</p>
+					<button><span><a href="https://glammakeupsalon.netlify.app" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
 				</div>
-				<img src="img/glam-makeup-salon.png">
+				<img src="img/glam-makeup-salon.png" class="right slide-in">
 			</div>
 			
-			<div class="first-project">
-				<img src="img/sizzle-restaurant.png">
-				<div class="right">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minima libero nobis cupiditate ipsam, ut delectus eveniet, fugit incidunt labore nostrum, dolorem sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
-					<button><a href="https://sizzlerestaurant.netlify.app">Live Site</a></button>
+			<div class="third project">
+				<img src="img/sizzle-restaurant.png" class="left slide-in">
+				<div class="right slide-in content">
+					<p> Quibusdam minima libero nobis cupiditate ipsam, ut delectus eveniet, fugit incidunt labore nostrum, dolorem sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
+					<br>
+					<p>Tools Used: HTML, CSS, JavasScript</p>
+					<button><span><a href="https://sizzlerestaurant.netlify.app" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
 				</div>
 			</div>
 		</section>
@@ -109,38 +115,40 @@
 <!-- project ends -->
 
 <!-- connect starts -->
-	<section class="connect">
-		<img src="img/connect-w-me-title.png">
-		<a href="linkedin.com"><img src="img/linkedin-logo.png"></a>
+	<section class="connect" id="connect">
+		<!-- <img src="img/connect-w-me-title.png"> -->
+		<!-- form starts -->
+			<section class="form">
+				<form action="post" data-netlify="true">
+					<div class="fields">
+						<div class="field half">
+							<input type="text" name="name" id="name" placeholder="Name" />
+						</div>
+						<div class="field half">
+							<input type="email" name="email" id="email" placeholder="Email" />
+						</div>
+						<div class="field">
+							<textarea name="message" id="message" placeholder="Message"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send" class="primary" /></li>
+					</ul>
+					<div class="field">
+						<div data-netlify-recaptcha="true"></div>
+					</div>
+					<input type="file" name="_next" value="https://nirelchua.netlify.app/thankyou.html">
+				</form>
+			</section>
+		<!-- form ends -->
+
+		<!-- <a href="linkedin.com"><img src="img/linkedin-logo.png"></a>
 		<a href="twitter.com"><img src="img/twitter-logo.png"></a>
-		<a href="img/instagram-logo.png"><img src="img/instagram-logo.png"></a>
+		<a href="img/instagram-logo.png"><img src="img/instagram-logo.png"></a> -->
+
 	</section>
 <!-- connect ends -->
 
-<!-- form starts -->
-	<!-- <section class="form">
-		<form action="post" data-netlify="true">
-			<div class="fields">
-				<div class="field half">
-					<input type="text" name="name" id="name" placeholder="Name" />
-				</div>
-				<div class="field half">
-					<input type="email" name="email" id="email" placeholder="Email" />
-				</div>
-				<div class="field">
-					<textarea name="message" id="message" placeholder="Message"></textarea>
-				</div>
-			</div>
-			<ul class="actions">
-				<li><input type="submit" value="Send" class="primary" /></li>
-			</ul>
-			<div class="field">
-				<div data-netlify-recaptcha="true"></div>
-			</div>
-			<input type="file" name="_next" value="https://nirelchua.netlify.app/thankyou.html">
-		</form>
-	</section> -->
-<!-- form ends -->
 
 <!-- footer starts -->
 	<!-- <section class="footer">

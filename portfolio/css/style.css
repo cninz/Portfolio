@@ -12,6 +12,7 @@
 /*******************************************/
 :root {
   --duck: #F9D624;
+  --jaffa: #ed7745;
   --blueribbon: #0066ff; 
   --cobalt: #0146AD;
   --black: #222;
@@ -22,6 +23,7 @@
   --dark-bg: rgba(0, 0, 0, .7);
   --border: .1rem solid #aaa;
   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  --text-shadow: 5px 5px #222;
 }
 
 * {
@@ -62,6 +64,10 @@ html::-webkit-scrollbar-thumb {
   background: var(--duck);
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .profile{
   text-align: center;
 }
@@ -78,26 +84,78 @@ p{
 
 h1 a {
   color: var(--duck);
+  text-shadow: 5px 5px #222;
+}
+
+h1 span:before{
+  content: '';
+  animation: animate 10s infinite;
+}
+
+@keyframes animate{
+  0%{
+    content: 'привет';
+  }
+  20%{
+    content: '你好';
+  }
+  40%{
+    content: 'ਸਤ ਸ੍ਰੀ ਅਕਾਲ';
+  }
+  60%{
+    content: '안녕하세요';
+  }
+  80%{
+    content: 'こんにちは';
+  }
+  100%{
+    content:'Hi';
+  }
 }
 
 
-button {
+/* button {
   margin: 2rem 0.5rem;
   background: var(--duck);
-  box-shadow: var(--box-shadow);
-  font-size: 2rem;
+  box-shadow: 5px 5px #222;
+  font-size: 3rem;
   cursor: pointer;
   padding: 1rem 3rem;
   border-radius: 5px;
-  text-shadow: 2px 2px #d6b616;
+ } */
+
+/* button a{
+  color: var(--black);
+} */
+
+/* button:hover{
+  transform: translate3d(-8px, -8px, 0)
+} */
+
+button {
+  background: #000;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 0;
+  border-radius: 5px;
+  margin: 2rem 1rem;
+}
+
+button span {
+  display: block;
+  background: var(--duck);
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  transform: translate3d(-4px, -4px, 0);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 
 button a{
   color: var(--white);
 }
 
-button:hover{
-  border-color: rgba(255, 255, 255, 0.55) !important;
+button:hover span {
+  transform: translate3d(-8px, -8px, 0);
 }
 
 .my-work{
@@ -172,14 +230,14 @@ button:hover{
   letter-spacing: 0.5rem;
 }
 
-a{
+.grid a{
   grid-column: 2/5;
   grid-row: 5/6;
   margin: auto;
   color: var(--cobalt);
 }
 
-a:hover{
+.grid a:hover{
   transform: scale(1.1);
 }
 
@@ -196,72 +254,66 @@ a:hover{
   opacity: 1;
 }
 
-.project-content img{
-  height: 50%;
-  width: 50%;
-}
-
-.first-project{
+.project{
   display: flex;
   flex-direction: row;
   padding: 3rem 20rem;
   align-items: center;
+  background: pink;
 }
 
-.first-project p{
+.project-content img{
+  height: 50%;
+  width: 50%;
+  z-index: 1;
+}
+
+.project img{
+  /* border: solid 1rem var(--duck); */
+  padding: 0;
+  box-shadow: 2px 0 0 #222;
+  background: #222;
+  opacity: 0.5;
+}
+
+.project img:hover{
+  /* transform: scale(1.05); */
+}
+
+
+.project p{
   padding: 0; 
+  color: var(--light-white);
 }
 
 .right, .left{
   padding: 0 5rem;
 }
 
-.left{
-  transform: translateX(-50%);
-}
-
-.right{
-  transform: translateX(50%);
-}
-
-
-/* .more-stuff-grid {
-  padding: 4em 0;
-  display: grid;
-  grid-gap: 2em;
-  align-items: center;
-  grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(1em,
-      1fr);
-}
-
-.from-left {
-  grid-column: 2 / 3;
+.left {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
-.from-right {
-  grid-column: 3 / 4;
+.right {
   -webkit-transform: translateX(50%);
   transform: translateX(50%);
 }
 
-.from-left,
-.from-right {
+.left,
+.right {
   transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
   transition: opacity 250ms ease-in, transform 400ms ease-in;
-  transition: opacity 250ms ease-in, transform 400ms ease-in,
-    -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in, -webkit-transform 400ms ease-in;
   opacity: 0;
 }
 
-.from-left.appear,
-.from-right.appear {
+.left.appear,
+.right.appear {
   -webkit-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
-} */
-
+} 
 
 /******************************************
 /* ADDITIONAL STYLES
