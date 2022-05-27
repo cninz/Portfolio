@@ -94,7 +94,7 @@ h1 span:before{
 
 @keyframes animate{
   0%{
-    content: 'привет';
+    content: 'Hi';
   }
   20%{
     content: '你好';
@@ -148,6 +148,7 @@ button span {
   border-radius: 5px;
   transform: translate3d(-4px, -4px, 0);
   transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  color: var(--white);
 }
 
 button a{
@@ -259,31 +260,24 @@ button:hover span {
   flex-direction: row;
   padding: 3rem 20rem;
   align-items: center;
-  background: pink;
 }
 
 .project-content img{
-  height: 50%;
-  width: 50%;
   z-index: 1;
 }
 
 .project img{
-  /* border: solid 1rem var(--duck); */
+  /* border: solid 1rem var(--duck);
+  box-shadow: 3px 3px 0 #222; */
   padding: 0;
-  box-shadow: 2px 0 0 #222;
-  background: #222;
-  opacity: 0.5;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
 }
-
-.project img:hover{
-  /* transform: scale(1.05); */
-}
-
 
 .project p{
   padding: 0; 
-  color: var(--light-white);
+  color: var(--black);
 }
 
 .right, .left{
@@ -291,30 +285,62 @@ button:hover span {
 }
 
 .left {
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
 .right {
-  -webkit-transform: translateX(50%);
   transform: translateX(50%);
 }
 
 .left,
 .right {
-  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
   transition: opacity 250ms ease-in, transform 400ms ease-in;
-  transition: opacity 250ms ease-in, transform 400ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
   opacity: 0;
 }
 
 .left.appear,
 .right.appear {
-  -webkit-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
 } 
 
+.sites {
+  background: #000;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 0;
+  border-radius: 5px;
+  margin: 2rem 1rem;
+} 
+
+.sites span {
+  display: block;
+  padding: 1.5rem 2rem;
+  background: var(--white);
+  border-radius: 5px;
+  transform: translate3d(-7px, -7px, 0);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.sites:hover span {
+  transform: translate3d(-12px, -12px, 0);
+}
+
+.connect  * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: auto;
+  margin: auto;
+}
+
+.connect img.title{
+  margin-top: 5rem;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+  
