@@ -10,7 +10,7 @@
 	<script src="https://kit.fontawesome.com/94767ac4fe.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Inter&display=swap" rel="stylesheet">
 
 	<!-- slider api link -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -29,10 +29,23 @@
 
 <body>
 	<!-- header starts -->
+	<section class="header">
+		<a href="#" class="logo">nirelco. <i class="fa-solid fa-fish"></i></a>
+		<nav class="navbar">
+			<a href="#dark-mode"><i class="fa-solid fa-moon"></i></a>
+			<a href="#dark-mode"><i class='far fa-sun'></i></a>
+			<a href="#home">home</a>
+			<a href="#projects">projects</a>
+			<a href="#contact">contact</a>
+
+			<!-- <a href="#dark-mode"><i class="fa-solid fa-sun-bright"></i></a> -->
+		</nav>
+		<div id="menu-btn" class="fas fa-bars"> </div>
+	</section>
 	<!-- header ends -->
 
 	<!-- main starts -->
-	<section class="main ">
+	<section class="home" id="home">
 		<section class="profile">
 			<img src="img/profile-avatar.png" alt="Profile Pic">
 			<section class="text">
@@ -80,13 +93,12 @@
 						dolorem sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
 					<br>
 					<p>Tools Used: HTML, CSS, JavasScript</p>
-					<button><span><a href="https://sizzlerestaurant.netlify.app" target="_blank"
-								rel="noopener noreferrer">Live Site</a></span></button>
+					<button><span><a href="https://sizzlerestaurant.netlify.app" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
 				</div>
 			</div>
 			<div class="second project">
 				<div class="sites">
-					<span><a href="#" target="_blank" rel="noopener noreferrer">
+					<span><a href="https://glammakeupsalon.netlify.app" target="_blank" rel="noopener noreferrer">
 							<img src="img/glam-makeup-salon.png" class="left slide-in">
 						</a></span>
 				</div>
@@ -96,8 +108,7 @@
 						sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
 					<br>
 					<p>Tools Used: HTML, CSS, JavasScript</p>
-					<button><span><a href="https://sizzlerestaurant.netlify.app" target="_blank"
-								rel="noopener noreferrer">Live Site</a></span></button>
+					<button><span><a href="https://glammakeupsalon.netlify.app" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
 				</div>
 			</div>
 			<div class="third project">
@@ -119,62 +130,76 @@
 	</section>
 	<!-- project ends -->
 
-	<!-- connect starts -->
-	<section class="connect" id="connect">
+	<!-- contact starts -->
+	<section class="contact" id="contact">
 		<img src="img/connect-title.png" class="title">
-		<div class="grid">
-			<div class="blobs">
+		<section class="grid2">
+			<!-- blobs start -->
+			<section class="blobs">
 				<svg id="visual" viewBox="0 0 900 600" width="1000" height="1000" xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-					<g transform="translate(463.141857778975 263.9970262227502)">
+					<g transform="translate(450.7874148038465 296.6560851162636)">
 						<path id="blob1"
-							d="M235.9 -209.6C299.7 -172.1 341.4 -86 351.4 10C361.4 106.1 339.8 212.1 276 270.3C212.1 328.5 106.1 338.7 4.8 333.9C-96.4 329.1 -192.8 309.1 -262.8 251C-332.8 192.8 -376.4 96.4 -379.8 -3.4C-383.2 -103.2 -346.5 -206.5 -276.5 -244C-206.5 -281.5 -103.2 -253.2 -8.6 -244.6C86 -236 172.1 -247.1 235.9 -209.6"
-							fill="#f9d624">
-						</path>
-					</g>					
-					<g transform="translate(373.42555680799717 306.7220220805623)" style="visibility:hidden">
+							d="M275.8 -249.6C339.5 -212.1 360.7 -106.1 357.9 -2.8C355.1 100.4 328.2 200.8 264.5 244.5C200.8 288.2 100.4 275.1 13.9 261.2C-72.6 247.3 -145.2 232.5 -214.2 188.9C-283.2 145.2 -348.6 72.6 -358.4 -9.8C-368.2 -92.2 -322.3 -184.3 -253.3 -221.8C-184.3 -259.3 -92.2 -242.2 7 -249.1C106.1 -256.1 212.1 -287.1 275.8 -249.6"
+							fill="#f9d624"></path>
+					</g>
+					<g transform="translate(463.141857778975 263.9970262227502)" style="visibility:hidden">
 						<path id="blob2"
-							d="M277.7 -249.7C352.7 -202.7 401.4 -101.4 402.5 1.2C403.7 103.7 357.4 207.4 282.4 249.3C207.4 291.1 103.7 271 6.4 264.7C-91 258.3 -182 265.6 -219.5 223.8C-257 182 -241 91 -242.8 -1.8C-244.5 -94.5 -264 -189 -226.5 -236C-189 -283 -94.5 -282.5 3.4 -285.9C101.4 -289.4 202.7 -296.7 277.7 -249.7"
+							d="M235.9 -209.6C299.7 -172.1 341.4 -86 351.4 10C361.4 106.1 339.8 212.1 276 270.3C212.1 328.5 106.1 338.7 4.8 333.9C-96.4 329.1 -192.8 309.1 -262.8 251C-332.8 192.8 -376.4 96.4 -379.8 -3.4C-383.2 -103.2 -346.5 -206.5 -276.5 -244C-206.5 -281.5 -103.2 -253.2 -8.6 -244.6C86 -236 172.1 -247.1 235.9 -209.6"
 							fill="#f9d624"></path>
 					</g>
 				</svg>
-			</div>
+			</section>
+			<!-- blob ends -->
+
 			<!-- form starts -->
-			<section class="form" id="form">
-				<form action="post" data-netlify="true" class="content">
+			<section class="form box" id="form">
+				<form action="post" class="newform">
 					<div class="small">
-						<input type="text" class="sm" placeholder="First and Last Name">
-						<input type="email" class="sm" placeholder="Email">
-						<input type="phone" class="sm" placeholder="Phone">
+						<div class="name">
+							<input type="text" class="sm" placeholder="Name">
+							<input type="email" class="sm" placeholder="Email">
+						</div>
+						<div class="contact">
+							<!-- <input type="text" class="sm" placeholder="Last Name"> -->
+							<!-- <input type="text" class="sm" placeholder="Phone"> -->
+						</div>
 					</div>
 					<div class="big">
-						<input type="text" class="bg" placeholder="Message">
+						<textarea class="biginput" placeholder="Message"></textarea>
 					</div>
-					<button class="button">
-						<button><span>Submit</span></button>
-					</button>
+					<div class="submit">
+						<button class="btn"><span>Submit</span></button>
+					</div>
 				</form>
-				<!-- <p>Thank for submitting! We'll get back to you as soon as possible</p> -->
 			</section>
 			<!-- form ends -->
-		</div>
+		</section>
 
-		<!-- <a href="linkedin.com"><img src="img/linkedin-logo.png"></a>
-		<a href="twitter.com"><img src="img/twitter-logo.png"></a>
-		<a href="img/instagram-logo.png"><img src="img/instagram-logo.png"></a> -->
-
+		<!-- socials start -->
+		<section class="socials">
+			<a href="linkedin.com"><img src="img/linkedin-logo.png"></a>
+			<a href="twitter.com"><img src="img/twitter-logo.png"></a>
+			<a href="img/instagram-logo.png"><img src="img/instagram-logo.png"></a>
+		</section>
+		<!-- socials ends -->
+		
+		<section class="back">
+			<h1>
+				<a href="#home">Back to top</a>
+			</h1>
+		</section>
 	</section>
-	<!-- connect ends -->
-
+	<!-- contact ends -->
 
 	<!-- footer starts -->
-	<!-- <section class="footer">
+	<section class="footer">
 		<span>&copy; Nirel Chua. All rights reserved</span>
-	</section> -->
+	</section>
 	<!-- footer ends  -->
 
-	<!-- javascript link -->
-	<script type="text/javascript" src="js/main.js"></script>
+<!-- javascript link -->
+<script type="text/javascript" src="js/main.js"></script>
 
 </body>
 

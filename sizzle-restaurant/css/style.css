@@ -576,7 +576,7 @@ section{
     #menu-btn:hover{
         color: var(--peru)
     }
-    
+
 @media (max-width: 991px){
     section{
         padding: 3rem 2rem;
