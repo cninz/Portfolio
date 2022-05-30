@@ -778,6 +778,9 @@
     --paragraph: var(--white);
  }
 
+ .grid span, .grid a{
+   background: none;
+ }
 
 
  
