@@ -10,7 +10,8 @@
 	<script src="https://kit.fontawesome.com/94767ac4fe.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Inter&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dosis&family=Manrope&family=Sora:wght@300&display=swap"
+		rel="stylesheet">
 
 	<!-- slider api link -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -27,18 +28,18 @@
 	<script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
 </head>
 
+
 <body>
 	<!-- header starts -->
 	<section class="header">
-		<a href="#" class="logo">nirelco. <i class="fa-solid fa-fish"></i></a>
+		<a href="#" class="logo">nirelco. <img src="img/logo.png" alt="logo"></a>
 		<nav class="navbar">
-			<a href="#dark-mode"><i class="fa-solid fa-moon"></i></a>
-			<a href="#dark-mode"><i class='far fa-sun'></i></a>
+			<i class="fa-solid fa-moon" id="dark-mode-toggle"></i>
+			<i class='far fa-sun' id="light-mode-toggle"></i>
 			<a href="#home">home</a>
 			<a href="#projects">projects</a>
 			<a href="#contact">contact</a>
 
-			<!-- <a href="#dark-mode"><i class="fa-solid fa-sun-bright"></i></a> -->
 		</nav>
 		<div id="menu-btn" class="fas fa-bars"> </div>
 	</section>
@@ -55,11 +56,16 @@
 					game development and AI</p>
 			</section>
 			<section class="info">
-				<button><span><a href="https://docs.google.com/document/d/1RbdC-8Tt7YgLNh_6yWMhv3Tl3Ian-jm092PyLYJ3YiA"
-							target="_blank"
-							rel="https://docs.google.com/document/d/1RbdC-8Tt7YgLNh_6yWMhv3Tl3Ian-jm092PyLYJ3YiA/edit?usp=sharing">Resume</a></button>
-				<button><span><a href="https://github.com/cninz" target="_blank"
-							rel="noopener noreferrer">GitHub</a></span></button>
+				<button>
+					<span>
+						<a href="https://drive.google.com/file/d/13nXslFqiQvrHbzJK-_jdf_8WXIn6S0Ve/view?usp=sharing" target="_blank" rel="https://docs.google.com/document/d/1RbdC-8Tt7YgLNh_6yWMhv3Tl3Ian-jm092PyLYJ3YiA/edit?usp=sharing"><i class="fa-solid fa-file-pdf"></i>Resume</a>
+					</span>
+				</button>
+				<button>
+					<span>
+						<a href="https://github.com/cninz" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>GitHub</a>
+					</span>
+				</button>
 			</section>
 		</section>
 		<section>
@@ -77,58 +83,66 @@
 
 	<!-- projects starts -->
 	<section class="projects" id="projects">
-		<section class="project-content">
-			<div class="grid">
-				<img src="img/wave-4.png" alt="wave2" class="image">
-			</div>
-			<div class="first project">
-				<div class="sites">
-					<span><a href="http://sizzlerestaurant.netlify.app" target="_blank" rel="noopener noreferrer">
-							<img src="img/sizzle-restaurant.png" target="_blank" rel="noopener noreferrer"
-								class="left slide-in">
-						</a></span>
-				</div>
-				<div class="right slide-in content">
-					<p> Quibusdam minima libero nobis cupiditate ipsam, ut delectus eveniet, fugit incidunt labore nostrum,
-						dolorem sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
-					<br>
-					<p>Tools Used: HTML, CSS, JavasScript</p>
-					<button><span><a href="https://sizzlerestaurant.netlify.app" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
-				</div>
-			</div>
-			<div class="second project">
-				<div class="sites">
-					<span><a href="https://glammakeupsalon.netlify.app" target="_blank" rel="noopener noreferrer">
-							<img src="img/glam-makeup-salon.png" class="left slide-in">
-						</a></span>
-				</div>
-				<div class="right slide-in content">
-					<p> Quibusdam minima libero nobis cupiditate ipsam, ut delectus eveniet, fugit incidunt labore nostrum,
-						dolorem
-						sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
-					<br>
-					<p>Tools Used: HTML, CSS, JavasScript</p>
-					<button><span><a href="https://glammakeupsalon.netlify.app" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
-				</div>
-			</div>
-			<div class="third project">
-				<div class="sites">
-					<span><a href="#" target="_blank" rel="noopener noreferrer">
-							<img src="img/under-construction.jpg" class="left slide-in">
-
-						</a></span>
-				</div>
-				<div class="right slide-in content">
-					<p> Quibusdam minima libero nobis cupiditate ipsam, ut delectus eveniet, fugit incidunt labore nostrum,
-						dolorem sit mollitia odit officia debitis tempora velit voluptate perspiciatis! </p>
-					<br>
-					<p>Tools Used: HTML, CSS, JavasScript</p>
-					<button><span><a href="#" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
-				</div>
-			</div>
-		</section>
-	</section>
+        <section class="project-content">
+            <div class="grid">
+                <img src="img/wave-4.png" alt="wave2" class="image">
+            </div>
+            <div class="first project">
+                <div class="sites">
+                    <span>
+						<a href="http://sizzlerestaurant.netlify.app" target="_blank" rel="noopener noreferrer">
+                            <img src="img/sizzle-restaurant.png" target="_blank" rel="noopener noreferrer"
+                                class="left slide-in">
+                        </a>
+					</span>
+                </div>
+                <div class="right slide-in content">
+                    <p>Users can contact and book appointments with makeup artists and/or designers through the site. Products such as
+					skincare, makeup tools, palettes and many more are displayed with a price with the ability to add to a cart to be
+					purchased.</p>
+                    <br>
+                    <p><span>Tools Used: </span>HTML, CSS, JavasScript</p>
+                    <button><span><i class="fa-solid fa-globe"></i><a href="https://sizzlerestaurant.netlify.app" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
+                </div>
+            </div>
+            <div class="second project">
+                <div class="sites">
+                    <span>
+						<a href="https://glammakeupsalon.netlify.app" target="_blank" rel="noopener noreferrer">
+                            <img src="img/glam-makeup-salon.png" class="left slide-in">
+                        </a>
+					</span>
+                </div>
+                <div class="right slide-in content">
+                    <p>Static website to look at the menu, determine direction of the restaurant and display all necessary information for
+					consumers to locate and order food through the website.</p>
+                    <br>
+                    <p><span>Tools Used: </span>HTML, CSS, JavasScript</p>
+                    <button><span><i class="fa-solid fa-globe"></i><a href="https://glammakeupsalon.netlify.app" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
+                </div>
+            </div>
+            <div class="third project">
+                <div class="sites">
+                    <span>
+						<a href="#" target="_blank" rel="noopener noreferrer">
+                            <img src="img/under-construction.jpg" class="left slide-in">
+                        </a>
+					</span>
+                </div>
+                <div class="right slide-in content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eligendi quia mollitia ipsa asperiores deserunt repellendus, sequi doloremque necessitatibus laborum.</p>
+                    <br>
+                    <p><span>Tools Used: </span>To be determined</p>
+                    <button><span><i class="fa-solid fa-globe"></i><a href="#" target="_blank" rel="noopener noreferrer">Live Site</a></span></button>
+                </div>
+            </div>
+        </section>
+    </section>
 	<!-- project ends -->
+
+	<section class="services">
+		<p>Ready to start showcasing your art? Want to finally make that E-commerce Store? Or get your restaurant recognized by many more? <a href="#contact">Contact me now</a> and we'll start it together!</p>
+	</section>
 
 	<!-- contact starts -->
 	<section class="contact" id="contact">
@@ -178,9 +192,9 @@
 
 		<!-- socials start -->
 		<section class="socials">
-			<a href="linkedin.com"><img src="img/linkedin-logo.png"></a>
-			<a href="twitter.com"><img src="img/twitter-logo.png"></a>
-			<a href="img/instagram-logo.png"><img src="img/instagram-logo.png"></a>
+			<a href="https://www.linkedin.com/in/nirel-chua/" target="_blank" rel="noopener noreferrer"><img src="img/linkedin-logo.png"></a>
+			<a href="https://twitter.com/naniitsnina_" target="_blank" rel="noopener noreferrer"><img src="img/twitter-logo.png"></a>
+			<a href="https://www.instagram.com/naniitsnina/?hl=en" target="_blank" rel="noopener noreferrer"><img src="img/instagram-logo.png"></a>
 		</section>
 		<!-- socials ends -->
 		
@@ -194,7 +208,7 @@
 
 	<!-- footer starts -->
 	<section class="footer">
-		<span>&copy; Nirel Chua. All rights reserved</span>
+		<span>&copy; Nirel Chua 2022</span>
 	</section>
 	<!-- footer ends  -->
 
