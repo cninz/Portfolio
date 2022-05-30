@@ -160,6 +160,14 @@
     padding: 1rem;
   }
 
+  i:hover{
+    color:var(--blueribbon);
+  }
+
+  i.sun:hover{
+    color: var(--duck);
+  }
+
   button {
     background: rgba(0, 0, 0, 0.767);
     font-weight: 700;
@@ -619,7 +627,7 @@
   }
 
   .back h1 a {
-    margin: 0 0 0 5rem;
+    margin: 0 0 0 15rem;
     font-size: 3rem;
     text-shadow: 2px 2px #222;
   }
