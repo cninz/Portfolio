@@ -23,7 +23,7 @@
     --dark-bg: rgba(0, 0, 0, .7);
     --border: .1rem solid #aaa;
     --box-shadow: 1rem 1rem rgba(0, 0, 0, 0.767);
-    --header-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.322);
+    /* --header-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.678); */
     --text-shadow: 5px 5px #222;
     --background: var(--white);
     --visibility: hidden;
@@ -81,6 +81,8 @@
     right: 0;
     /* background: var(--light-black); */
     z-index: 1000;
+    height: 7rem;
+    width: 100%;
   }
 
   .header .logo {
@@ -133,6 +135,10 @@
     /* overflow-x: hidden;   */
     height: 100%;
     width: 100%;
+
+  }
+  .projects{
+    overflow-x: hidden;
   }
 
   h1{
@@ -192,12 +198,20 @@
     font-family: 'Dosis', 'sans-serif';
   }
 
+  button a:hover{
+    color:var(--blueribbon);
+  }
+
   button:hover span {
     transform: translate3d(-8px, -8px, 0);
   }
   /* GENERAL BODY STYLE ENDS */
 
   /* MAIN STYLE STARTS */
+  .home{
+    height: 100%;
+  }
+  
   .profile {
     text-align: center;
   }
@@ -279,14 +293,14 @@
 
   .grid{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     width: 100%;
     margin: 0;
   }
 
   .image, .grid-content{
-    grid-row: 1/6;
+    grid-row: 1/-1;
   }
   .image{
     grid-column: 1/-1;
@@ -295,9 +309,9 @@
   }
 
   .grid-content{
-    grid-column: 2/5;
+    grid-column: 4/8;
     align-self: center;
-    grid-row: 4/5;
+    grid-row: 5/6;
     text-align: center;
     font-size: 4rem;
     font-weight: 1000;
@@ -306,16 +320,25 @@
     flex-direction: column;
   }
 
+  /* .grid{
+    display: flex;
+    align-items: center;
+    margin: 8rem;
+    flex-direction: column;
+    padding: 3rem;
+  } */
+
   .grid-content:hover{
     letter-spacing: 0.5rem;
   }
 
   .grid a{
-    grid-column: 2/5;
-    grid-row: 5/6;
-    margin: auto;
+    grid-column: 4/8;
+    grid-row: 6/7;
     color: var(--cobalt);
-    font-family: 'Dosis', sans-serif;
+    font-size: 5rem;
+    font-family: 'Dosis', 'sans-serif';
+    margin: auto;
   }
 
   .grid a:hover{
@@ -325,7 +348,7 @@
 
   /* PROJECT STYLE STARTS */
   .grid-content, .image2{
-    background: var(--blueribbon);
+    background: none;
   }
 
   .fade-in {
@@ -338,25 +361,28 @@
   }
 
   .content{
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .project-content{
+    display: flex;
+    flex-direction: column;
   }
 
   .project{
     display: flex;
     flex-direction: row;
-    padding: 3rem 5rem;
-    align-items: center;
-    /* width: 50%; */
   }
 
   .project span{
     border: solid 1rem var(--duck);
   }
 
-  .project-content{
-    /* z-index: 1; */
-    /* width: 50%; */
-  }
 
   .project img{
     padding: 0;
@@ -369,10 +395,11 @@
     padding: 0; 
     color: var(--black);
     background: var(--white);
-    border: none;
+    border: solid 3px var(--dark-bg);
     border-radius: 5px;
     box-shadow: var(--box-shadow);
     padding: 2rem;
+    width: 100%;
   }
 
   .project p span{
@@ -416,8 +443,9 @@
     font-size: 3rem;
     padding: 0;
     border-radius: 5px;
-    margin: 2rem 1rem;
-    width: 50%;
+    margin: 10rem 1rem;
+    width: 100%;
+    height: auto;
   } 
 
   .sites span {
@@ -437,6 +465,8 @@
   /* SERVICES STYLE STARTS */
   .services p {
     padding: 15rem;
+    line-height: 5rem;
+    text-align: center;
     /* object-fit: cover; */
     background: none;
     color: var(--paragraph);
@@ -478,6 +508,7 @@
     margin: 10rem 7rem 7rem 12rem;
     background: none;
     margin: auto;
+    text-align: center;
   }
 
   .newform {
@@ -658,15 +689,77 @@
 
 
 
-  @media screen and (max-width: 1300px){
+  /* MEDIA QUERIES */
+
+
+  @media screen and (max-width: 1350px){
     .project{
       flex-direction: column;
+      align-items: center;
     }
+
+    .project-content{
+      justify-content: center;
+    }
+    
+    .content{
+      padding: 0 5rem;
+      margin: auto;
+      width: 100%;
+    }
+
+    .project .sites{
+      width: 100%;
+    }
+
+    .project .content{
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1200px){
+    #menu-btn {
+        font-size: 3.5rem;
+        display: inline-block;
+    
+      }
+    
+      .home .slide .content h3 {
+        font-size: 15vw;
+      }
+    
+      .fa-times {
+        transform: rotate(90deg);
+      }
+    
+      .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: var(--duck);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .header .navbar i {
+        background: var(--duck);
+      }
+    
+      .header .navbar a:hover {
+        color: var(--white);
+      }
+    
+      .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
   }
 
   @media screen and (max-width: 991px) {
     html {
-      font-size: 80%;
+      font-size: 70%;
     }
     
     .project .sites{
@@ -694,43 +787,6 @@
       display: inline;
     }
 
-    #menu-btn {
-      font-size: 3.5rem;
-      display: inline-block;
-      
-    }
-
-    .home .slide .content h3 {
-      font-size: 15vw;
-    }
-
-    .fa-times {
-      transform: rotate(90deg);
-    }
-
-    .header .navbar {
-      position: absolute;
-      top: 99%;
-      left: 0;
-      right: 0;
-      background: var(--duck);
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .header .navbar i{
-      background: var(--duck);
-    }
-    .header .navbar a:hover{
-      color: var(--white);
-    }
-    
-    .header .navbar.active {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-
     .contact img{
       width: 95%;
     }
@@ -744,28 +800,150 @@
     font-size: 3rem;
     }
 
-    .image2{
-      width: 80%;
-      height: 80%;
+    .box {
+      grid-column: 2/10;
     }
 
-    .box {
-      grid-column: 3/9
+    .services p {
+      padding: 5rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    .back h1 a {
+      margin: 0 0 0 5rem;
     }
   }
-  @media screen and (max-width: 730px){
+
+
+  @media screen and (max-width: 750px){
     svg{
-      display: none;
+      /* display: none; */
+      height: auto;
     }
     html {
-      font-size: 60%;
+      font-size: 50%;
     }
-    
+
+    .header{
+      height: 10rem;
+    }
+
+    .grid a{
+      grid-row: 7/8;
+      margin:auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .grid a img{
+      height: 80%;
+      width: 80%; 
+    }
+
+    .content .right{
+      padding: 0;
+    }
+
     .box{
-    display: flex;
-    flex-direction: column;
+    grid-column:2/10;
+    grid-row: 3;
+    height: auto;
+    width: auto;
+    }
+
+  }
+
+  @media screen and (max-width: 530px){
+    html{
+      
+      padding: auto;
+      margin: auto;  
+    }
+
+    .home p{
+      padding: 0; 
+    }
+
+    /* .content{
+      padding: 0 3rem;
+    } */
+
+    /* .sites{
+      margin:auto;
+      padding: 1rem;
+      width: 50%;
+    } */
+
+    .newform{
+      padding: 3rem 0;
+    }
+
+    .box{
+      grid-row: 3;
     }
   }
+
+  @media screen and (max-width:450px){
+    html{
+      font-size: 40%;
+    }
+
+    .header {
+      height: 15rem;
+    }
+
+    .header .logo {
+      font-size: 7rem;
+    }
+
+    #menu-btn {
+      font-size: 5rem;
+    }
+  }
+
+  @media screen and (max-width:390px) {
+    html{
+      font-size: 30%;
+    }
+
+    .header .navbar a, i{
+      font-size: 5rem;
+    }
+    
+    
+
+    svg {
+        display: none;
+      }
+
+    .grid a img{
+      height: 60%;
+      width: 60%;
+    }
+
+    .content{
+      padding: 0 3rem;
+    }
+  }
+
+  @media screen and (max-width: 195px){
+    html{
+      font-size: 10%;
+    }
+
+    .contact img.title{
+      margin-top: 15rem;
+    }
+
+    .grid a img{
+      width: 30%;
+    }
+  }
+
   
   /******************************************
   /* ADDITIONAL STYLES
@@ -774,13 +952,10 @@
   
  .darkmode{
     --background: var(--light-black);
-    /* --header-shadow: 0;  */
+    --header-shadow: 0; 
     --paragraph: var(--white);
  }
 
- .grid span, .grid a{
-   background: none;
- }
 
 
  
