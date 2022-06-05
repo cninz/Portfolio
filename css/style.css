@@ -755,6 +755,10 @@
       .header .navbar.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       }
+
+      .header .navbar i.sun:hover{
+        color: white;
+      }
   }
 
   @media screen and (max-width: 991px) {
@@ -900,6 +904,12 @@
       font-size: 7rem;
     }
 
+    .header .navbar a,
+    i {
+      font-size: 5rem;
+      line-height: 12rem;
+    }
+
     #menu-btn {
       font-size: 5rem;
     }
@@ -909,13 +919,7 @@
     html{
       font-size: 30%;
     }
-
-    .header .navbar a, i{
-      font-size: 5rem;
-    }
     
-    
-
     svg {
         display: none;
       }
