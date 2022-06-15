@@ -121,9 +121,13 @@
   #menu-btn {
     font-size: 2.5rem;
     cursor: pointer;
-    color: var(--black);
+    /* color: var(--duck);  */
     display: block;
     display: none;
+  }
+
+  .fa-times{
+    color: var(--duck)
   }
 
   /* HEADER STYLE ENDS */
@@ -159,7 +163,7 @@
 
   a{
     color: var(--duck);
-    text-shadow: 0.3rem 0.3rem  #222;
+    text-shadow: 0.2rem 0.2rem  #222;
   }
 
   i {
@@ -179,7 +183,7 @@
     background: rgba(0, 0, 0, 0.767);
     font-weight: 700;
     font-size: 3rem;
-    padding: 0;
+    /* padding: 1rem; */
     border-radius: 5px;
     margin: 4rem 1rem;
   }
@@ -187,9 +191,9 @@
   button span {
     display: block;
     background: var(--duck);
-    padding: 0 3rem 0 0 ;
+    padding: 1rem 3rem 1rem 0;
     border-radius: 5px;
-    transform: translate3d(-6px, -6px, 0);
+    transform: translate3d(-0.7rem, -0.7rem, 0);
     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
     color: var(--white);
   }
@@ -204,7 +208,7 @@
   }
 
   button:hover span {
-    transform: translate3d(-8px, -8px, 0);
+    transform: translate3d(-1rem, -1rem, 0);
   }
   /* GENERAL BODY STYLE ENDS */
 
@@ -219,6 +223,10 @@
 
   .profile img {
     margin-top: 3rem;
+  }
+
+  .profile .text{
+    margin: 0 2rem;
   }
 
   h1 span:before {
@@ -721,46 +729,50 @@
 
   @media screen and (max-width: 1200px){
     #menu-btn {
-        font-size: 3.5rem;
-        display: inline-block;
+      font-size: 3.5rem;
+      display: inline-block;
+  
+    }
+    #menu-btn .active {
+      color:var(--duck)
+    }
     
-      }
+    .home .slide .content h3 {
+      font-size: 15vw;
+    }
+  
+    .fa-times {
+      transform: rotate(90deg);
+      
+    }
     
-      .home .slide .content h3 {
-        font-size: 15vw;
-      }
-    
-      .fa-times {
-        transform: rotate(90deg);
-      }
-    
-      .header .navbar {
-        position: absolute;
-        top: 99%;
-        left: 0;
-        right: 0;
-        background: var(--duck);
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      .header .navbar i {
-        background: var(--duck);
-      }
-    
-      .header .navbar a:hover {
-        color: var(--white);
-      }
-    
-      .header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      }
+    .header .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: var(--duck);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header .navbar i {
+      background: var(--duck);
+    }
+  
+    .header .navbar a:hover {
+      color: var(--white);
+    }
+  
+    .header .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
 
-      .header .navbar i.sun:hover{
-        color: white;
-      }
+    .header .navbar i.sun:hover{
+      color: white;
+    }
   }
 
   @media screen and (max-width: 991px) {
