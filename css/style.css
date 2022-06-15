@@ -28,6 +28,7 @@
     --background: var(--white);
     --visibility: hidden;
     --paragraph: var(--black);
+    --span: var(--black);
   }
 
   * {
@@ -147,7 +148,7 @@
 
   h1 a{
     color: var(--duck);
-    text-shadow: 5px 5px #222;
+    /* text-shadow: 5px 5px #222; */
   }
 
   p{
@@ -158,7 +159,7 @@
 
   a{
     color: var(--duck);
-    text-shadow: 2px 2px #222;
+    text-shadow: 0.3rem 0.3rem  #222;
   }
 
   i {
@@ -180,13 +181,13 @@
     font-size: 3rem;
     padding: 0;
     border-radius: 5px;
-    margin: 2rem 1rem;
+    margin: 4rem 1rem;
   }
 
   button span {
     display: block;
     background: var(--duck);
-    padding: 1.5rem 2rem;
+    padding: 0 3rem 0 0 ;
     border-radius: 5px;
     transform: translate3d(-6px, -6px, 0);
     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
@@ -491,7 +492,7 @@
   
   /* FORM STYLE STARTs */
   ::placeholder{
-    color: var(--white);
+    color: var(--span);
   }
   .box *{
     background: none;
@@ -536,7 +537,7 @@
     height: 5rem;
     margin: 1rem 0;
     border-radius: 5px;
-    border: solid 2px var(--white);
+    border: solid 3px var(--dark-bg);
     box-shadow: var(--box-shadow);
     padding: 0 1rem;
 
@@ -549,7 +550,7 @@
     height: 9rem;
     margin: 1rem 0;
     border-radius: 5px;
-    border: solid 2px white;
+    border: solid 3px var(--dark-bg);
     box-shadow: var(--box-shadow);
     padding: 2rem 1rem;
   
@@ -558,6 +559,7 @@
   .submit{
     display: flex;
     justify-content: center;
+    margin: 1rem;
   }
 
   .submit .btn{
@@ -660,7 +662,7 @@
   .back h1 a {
     margin: 0 0 0 15rem;
     font-size: 3rem;
-    text-shadow: 2px 2px #222;
+    text-shadow: 0.3rem 0.3rem  #222;
   }
   
   /* CONTACT STYLE ENDS */
@@ -958,6 +960,7 @@
     --background: var(--light-black);
     --header-shadow: 0; 
     --paragraph: var(--white);
+    --span: var(--white);
  }
 
 
