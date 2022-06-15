@@ -962,6 +962,10 @@
     .grid a img{
       width: 30%;
     }
+
+    .grid-content a{
+      font-size: 50%;
+    }
   }
 
   
