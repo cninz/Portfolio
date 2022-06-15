@@ -24,7 +24,7 @@
     --border: .1rem solid #aaa;
     --box-shadow: 1rem 1rem rgba(0, 0, 0, 0.767);
     /* --header-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.678); */
-    --text-shadow: 5px 5px #222;
+    --text-shadow: 0.2rem 0.2rem #222;
     --background: var(--white);
     --visibility: hidden;
     --paragraph: var(--black);
@@ -126,6 +126,10 @@
     display: none;
   }
 
+  .fa-bars{
+    color: var(--black);
+  }
+
   .fa-times{
     color: var(--duck)
   }
@@ -150,11 +154,6 @@
     font-size: 5rem;
   }
 
-  h1 a{
-    color: var(--duck);
-    /* text-shadow: 5px 5px #222; */
-  }
-
   p{
     font-size: 3rem;
     padding: 0 5rem;
@@ -163,12 +162,13 @@
 
   a{
     color: var(--duck);
-    text-shadow: 0.2rem 0.2rem  #222;
+    text-shadow: var(--text-shadow);
   }
 
   i {
     background: none;
     padding: 1rem;
+    /* margin: 0 1rem 0 0;  */
   }
 
   i:hover{
@@ -191,11 +191,15 @@
   button span {
     display: block;
     background: var(--duck);
-    padding: 1rem 3rem 1rem 0;
+    padding: 1rem 3rem;
     border-radius: 5px;
     transform: translate3d(-0.7rem, -0.7rem, 0);
     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
     color: var(--white);
+  }
+
+  button i{
+    margin: 0;
   }
 
   button a{
@@ -232,6 +236,11 @@
   h1 span:before {
     content: '';
     animation: animate 10s infinite;
+  }
+
+  .profile h1 a {
+    color: var(--duck);
+    text-shadow: 0.5rem 0.5rem #222;
   }
 
 
@@ -654,14 +663,7 @@
     transform: scale(0.3);
   }
 
-  .socials img{
-    /* height: 100%;
-    width: 100%; */
-  }
-
   .socials img:hover{
-    /* border: solid 5rem var(--duck); */
-    /* border-radius: 5px; */
     transform: scale(0.8);
     display: flex;
     justify-content: space-evenly;
@@ -670,7 +672,10 @@
   .back h1 a {
     margin: 0 0 0 15rem;
     font-size: 3rem;
-    text-shadow: 0.3rem 0.3rem  #222;
+  }
+
+  .back h1 a:hover{
+    color: var(--blueribbon);
   }
   
   /* CONTACT STYLE ENDS */
