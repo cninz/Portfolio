@@ -94,7 +94,7 @@ lightModeToggle.addEventListener('click', () => {
 
 
 // Get form submission info
-const formId = 'your-form-id';
+const formId = 'form1';
 const url = `https://api.netlify.com/api/v1/forms/${formId}/submissions`;
 
 fetch(url)
