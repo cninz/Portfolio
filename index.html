@@ -175,21 +175,30 @@
 			<!-- blob ends -->
 
 			<!-- form starts -->
-			<form action="POST" data-netlify="true">
-				<div class="fields">
-					<div class="field half">
-						<input type="text" name="name" id="name" placeholder="Name"/>
+			<section class="form box" id="form">
+				<form action="POST" data-netlify="true" class="newform">
+					<div class="small">
+						<div class="name">
+							<input type="text" class="sm" placeholder="Name">
+							<input type="email" class="sm" placeholder="Email">
+						</div>
+						<div class="contact">
+							<input type="text" class="sm" placeholder="Last Name">
+							<input type="text" class="sm" placeholder="Phone">
+						</div>
 					</div>
-					<div class="field half">
-						<input type="text" name="email" id="email" placeholder="Email"/>
+					<div class="big">
+						<textarea class="biginput" placeholder="Message"></textarea>
+					</div>
+					<div class="submit">
+						<button class="btn"><span>Submit</span></button>
 					</div>
 					<div class="field">
-						<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
-						<input type="text" name="email" id="email" placeholder="Email"/>
+						<div data-netlify-recaptcha="true"></div>
 					</div>
-					
-				</div>
-			</form>
+
+				</form>
+			</section>
 			<!-- form ends -->
 		</section>
 
