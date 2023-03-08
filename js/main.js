@@ -91,3 +91,24 @@ darkModeToggle.addEventListener('click', () => {
 lightModeToggle.addEventListener('click', () => {
     disableDarkMode();
 });
+
+
+// Get form submission info
+const formId = 'your-form-id';
+const url = `https://api.netlify.com/api/v1/forms/${formId}/submissions`;
+
+fetch(url)
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Network response was not ok.');
+    })
+    .then(data => {
+        // Do something with the form submission data
+        console.log(data);
+    })
+    .catch(error => {
+        // Handle errors here
+        console.error('There was a problem fetching form submissions:', error);
+    });
