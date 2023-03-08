@@ -94,7 +94,7 @@ lightModeToggle.addEventListener('click', () => {
 
 
 // Get form submission info
-const formId = 'form1';
+const formId = '49d46fa8-42bd-4dd5-a2a9-1c7de6fadf8a';
 const url = `https://api.netlify.com/api/v1/forms/${formId}/submissions`;
 
 fetch(url)
@@ -132,3 +132,6 @@ fetch(url)
         // Handle errors here
         console.error('There was a problem fetching form submissions:', error);
     });
+
+    // Site id
+const site_id = "49d46fa8-42bd-4dd5-a2a9-1c7de6fadf8a"
