@@ -104,18 +104,28 @@ fetch(url)
         }
         throw new Error('Network response was not ok.');
     })
+    // .then(data => {
+    //     // Display the form submission data on a web page
+    //     const submissionsContainer = document.querySelector('#submissions');
+    //     data.forEach(submission => {
+    //         const submissionElement = document.createElement('div');
+    //         submissionElement.innerHTML = `
+    //     <p>Submitted on: ${submission.created_at}</p>
+    //     <p>Name: ${submission.data.name}</p>
+    //     <p>Email: ${submission.data.email}</p>
+    //     <p>Message: ${submission.data.message}</p>
+    //   `;
+    //         submissionsContainer.appendChild(submissionElement);
+    //     });
+    // })
+
     .then(data => {
-        // Display the form submission data on a web page
-        const submissionsContainer = document.querySelector('#submissions');
         data.forEach(submission => {
-            const submissionElement = document.createElement('div');
-            submissionElement.innerHTML = `
-        <p>Submitted on: ${submission.created_at}</p>
-        <p>Name: ${submission.data.name}</p>
-        <p>Email: ${submission.data.email}</p>
-        <p>Message: ${submission.data.message}</p>
-      `;
-            submissionsContainer.appendChild(submissionElement);
+            console.log(`Submitted on: ${submission.created_at}`);
+            console.log(`Name: ${submission.data.name}`);
+            console.log(`Email: ${submission.data.email}`);
+            console.log(`Message: ${submission.data.message}`);
+            console.log('-----');
         });
     })
     .catch(error => {
