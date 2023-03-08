@@ -105,8 +105,18 @@ fetch(url)
         throw new Error('Network response was not ok.');
     })
     .then(data => {
-        // Do something with the form submission data
-        console.log(data);
+        // Display the form submission data on a web page
+        const submissionsContainer = document.querySelector('#submissions');
+        data.forEach(submission => {
+            const submissionElement = document.createElement('div');
+            submissionElement.innerHTML = `
+        <p>Submitted on: ${submission.created_at}</p>
+        <p>Name: ${submission.data.name}</p>
+        <p>Email: ${submission.data.email}</p>
+        <p>Message: ${submission.data.message}</p>
+      `;
+            submissionsContainer.appendChild(submissionElement);
+        });
     })
     .catch(error => {
         // Handle errors here
